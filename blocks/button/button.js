@@ -67,11 +67,11 @@ module.exports = bemReact.createClass({
         this.setState({ focused : false });
     },
 
-    onMouseEnter : function() {
+    _onMouseEnter : function() {
         this.setState({ hovered : true });
     },
 
-    onMouseLeave : function() {
+    _onMouseLeave : function() {
         this.setState({ hovered : false });
     },
 
