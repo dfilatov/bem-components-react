@@ -7,6 +7,10 @@ module.exports = bemReact.createClass({
         };
     },
 
+    componentDidMount : function() {
+        this.props.focused && this._getControlDOMNode().focus();
+    },
+
     render : function() {
         var content = [this._renderControl()];
 
@@ -17,7 +21,6 @@ module.exports = bemReact.createClass({
             tag : 'span',
             mods : {
                 theme : this.props.theme,
-                view : this.props.view,
                 size : this.props.size,
                 focused : this.state.focused,
                 disabled : this.props.disabled
@@ -37,8 +40,12 @@ module.exports = bemReact.createClass({
             props : {
                 ref : 'control',
                 key : 'control',
+                type : this.props.type,
+                tabindex : this.props.tabindex,
                 disabled : this.props.disabled,
                 placeholder : this.props.placeholder,
+                id : this.props.id,
+                name : this.props.name,
                 value : this.props.value,
                 onFocus : this._onFocus,
                 onBlur : this._onBlur,
@@ -65,6 +72,10 @@ module.exports = bemReact.createClass({
     },
 
     _onChange : function() {
-        this.props.onChange && this.props.onChange(this.refs.control.getDOMNode().value);
+        this.props.onChange && this.props.onChange(this._getControlDOMNode().value);
+    },
+
+    _getControlDOMNode : function() {
+        return this.refs.control.getDOMNode();
     }
 });

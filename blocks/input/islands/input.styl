@@ -1,5 +1,5 @@
-ctx = '.input_theme_islands'
-{ctx} {
+.input_theme_islands
+{
     font-family: Arial, Helvetica, sans-serif;
 
     position: relative;
@@ -142,7 +142,7 @@ ctx = '.input_theme_islands'
         width: 24px;
         height: 24px;
 
-        background-image: url(clear_s.svg);
+        background-image: url(clear-s.svg);
         background-position: 7px 50%;
     }
 
@@ -157,11 +157,15 @@ ctx = '.input_theme_islands'
             padding-left: 6px;
         }
 
+        .input__clear
+        {
+            background-position: 7px 50%;
+        }
+
         &.input_has-clear .input__box
         {
             padding-right: 24px;
         }
-
     }
 
     &.input_size_m
@@ -175,17 +179,17 @@ ctx = '.input_theme_islands'
             padding-left: 8px;
         }
 
-        &.input_has-clear .input__box
-        {
-            padding-right: 28px;
-        }
-
         .input__clear
         {
             width: 28px;
             height: 28px;
 
             background-position: 9px 50%;
+        }
+
+        &.input_has-clear .input__box
+        {
+            padding-right: 28px;
         }
     }
 
@@ -195,8 +199,7 @@ ctx = '.input_theme_islands'
         width: 32px;
         height: 32px;
 
-        background-image: url(clear_l.svg);
-        background-position: 9px 50%;
+        background-image: url(clear-l.svg);
     }
 
     &.input_size_l
@@ -208,6 +211,11 @@ ctx = '.input_theme_islands'
         {
             height: 32px;
             padding-left: 10px;
+        }
+
+        &.input__clear
+        {
+            background-position: 9px 50%;
         }
 
         &.input_has-clear .input__box

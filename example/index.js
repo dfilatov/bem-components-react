@@ -1,5 +1,9 @@
+require('../blocks/input/islands/input.styl');
+require('../blocks/button/islands/button.styl');
+
 var bemReact = require('bem-react'),
-    Input = require('../blocks/input');
+    Input = require('../blocks/input/input.js'),
+    Button = require('../blocks/button/button.js');
 
 var App = bemReact.createClass({
     getInitialState : function() {
@@ -15,17 +19,29 @@ var App = bemReact.createClass({
     render : function() {
         return {
             block : 'app',
-            content : {
-                block : Input,
-                props : {
-                    theme : 'islands',
-                    size : 'm',
-                    placeholder : 'placeholder',
-                    hasClear : true,
-                    value : this.state.input,
-                    onChange : this._onInputChange
+            content : [
+                {
+                    block : Input,
+                    props : {
+                        key : 'input',
+                        theme : 'islands',
+                        size : 'm',
+                        placeholder : 'placeholder',
+                        hasClear : true,
+                        value : this.state.input,
+                        onChange : this._onInputChange
+                    }
+                },
+                {
+                    block : Button,
+                    props : {
+                        key : 'button',
+                        theme : 'islands',
+                        size : 'm',
+                        text : 'click me'
+                    }
                 }
-            }
+            ]
         };
     }
 });
