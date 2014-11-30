@@ -53,7 +53,8 @@ module.exports = bemReact.createClass({
                 onBlur : this._onBlur,
                 onMouseEnter : this._onMouseEnter,
                 onMouseLeave : this._onMouseLeave,
-                onMouseDown : this._onMouseDown
+                onMouseDown : this._onMouseDown,
+                onClick : this.props.onClick
             },
             content : content
         };

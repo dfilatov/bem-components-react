@@ -3,7 +3,8 @@ require('../blocks/button/islands/button.styl');
 
 var bemReact = require('bem-react'),
     Input = require('../blocks/input/input.js'),
-    Button = require('../blocks/button/button.js');
+    Button = require('../blocks/button/button.js'),
+    Popup = require('../blocks/popup/popup.js');
 
 var App = bemReact.createClass({
     getInitialState : function() {
