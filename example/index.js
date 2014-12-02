@@ -1,5 +1,6 @@
 require('../blocks/input/islands/input.styl');
 require('../blocks/button/islands/button.styl');
+require('../blocks/popup/islands/popup.styl');
 
 var bemReact = require('bem-react'),
     Input = require('../blocks/input/input.js'),

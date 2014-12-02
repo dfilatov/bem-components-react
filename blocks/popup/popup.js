@@ -1,10 +1,13 @@
+require('./popup.styl');
+
 var bemReact = require('bem-react'),
     Popup = bemReact.createClass({
         render : function() {
             return {
                 block : 'popup',
                 mods : {
-                    visible : this.props.visible
+                    theme : this.props.theme,
+                    visible : this.props.visible && !!this.props.target
                 },
                 content : this.props.content
             };

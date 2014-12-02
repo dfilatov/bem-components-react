@@ -22,6 +22,6 @@
   },
   "license": "MIT",
   "scripts": {
-    "dev-server": "webpack-dev-server --progress --colors"
+    "dev-server": "webpack-dev-server --progress --colors --port=3000"
   }
 }
